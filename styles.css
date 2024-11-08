@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width:100%;
+    font-family:poppins;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.header{
+    margin-right: 60px;
+    margin-left: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: nowrap;
+}
+
+.sverige-flaga{
+    margin-top: 60px;
+    object-fit: cover;
+    max-width: 100%;
+    display: block;
+    cursor: pointer;
+}
+/*link styling*/
+a{
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+/*sök symbol styling*/
+i {
+    margin-top: 55px;
+    margin-left: 40px;
+    display: block;
+    max-width: 100%;
+    font-size:30px;
+}
+/*headerkolumn-layout som innehåller logotyp och meny*/
+.header-column{
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    position: relative;
+    object-fit: contain;
+}
+/*Meny styling*/
+.header-menu{
+    margin-top: -10px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+    margin-right: 50px;
+}
+
+ul{
+    list-style: none;
+}
+/*meny text styling*/
+.menu-item{
+    font-size: 20px;
+}
+/*styling för logga in knappen*/
+button{
+    height: 3rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #ff9ad2 ;
+    border-radius: 5px;
+    margin-top: 3rem;
+    margin-left: -4rem;
+    cursor: pointer;
+    white-space: nowrap;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+/*logga in text styling*/
+.logga-in{
+    font-weight: 600;
+    color: white;
+}
