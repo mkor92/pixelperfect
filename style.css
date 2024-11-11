@@ -1,0 +1,76 @@
+/* ----------- Variabler ----------- */
+:root {
+  --cardcolor: #eae2df;
+  --cardshadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+main {
+  margin: auto;
+  max-width: 90vw;
+}
+
+/* ----------- Event kort ----------- */
+.event-container {
+  margin: auto;
+  max-width: 1120px;
+}
+
+.event-title {
+  padding: 0.3em;
+  font-weight: 400;
+  text-align: center;
+  color: white;
+  background-color: black;
+  margin-bottom: 1em;
+}
+
+.event-card-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+}
+.event-card {
+  max-width: 33%;
+  text-align: center;
+  box-shadow: var(--cardshadow);
+  background-color: var(--cardcolor);
+
+  img {
+    max-width: 100%;
+  }
+}
+
+/* ----------- Mobildesign -----------*/
+
+@media (max-width: 600px) {
+  .event-title {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .event-card-container {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    gap: 4em;
+    padding: 0 1.5em 1.5em 1.5em;
+    margin-top: 1em;
+  }
+
+  /* Varje kort och bild täcker hela bredden */
+  .event-card {
+    min-width: 100%;
+    scroll-snap-align: center;
+
+    img {
+      min-width: 100%;
+    }
+  }
+}
