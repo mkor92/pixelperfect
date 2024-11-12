@@ -1,280 +1,164 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-
+/* ----------- Variabler ----------- */
+:root {
+  --cardcolor: #eae2df;
+  --cardshadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  --pink: #ff9ad2;
 }
 
-body{
-    font-family:poppins;
-    background-color: white;
-    margin: auto;
-    max-width: 100vw;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+  margin: auto;
+  max-width: 90vw;
+}
+
+header {
+  margin: auto;
+  width: 100%;
+  max-width: 1120px;
+}
+
+.sverige-flagga {
+  height: fit-content;
+  margin-top: -3.5em;
+}
+
+.logo {
+  max-width: 400px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.header-menu {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+  margin-bottom: 1.5em;
+
+  a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.5em;
+  }
+}
+
+.logga-in {
+  margin-top: -1.5em;
+  height: fit-content;
+  width: 10em;
+  padding: 0.8em;
+  font-weight: bold;
+  font-size: 1em;
+  border-style: none;
+  border-radius: 0.3em;
+  box-shadow: var(--cardshadow);
+  color: white;
+  background-color: var(--pink);
+}
+
+.search-symb {
+  margin-top: -1.5em;
+  width: fit-content;
+  font-size: 2em;
+}
+.ham-menu {
+  margin-top: -1em;
+  width: fit-content;
+  display: none;
+  font-size: 2.5em;
+}
+
+.hero {
+  max-width: 100vw;
+
+  img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+  }
+}
+
+.hero-text-container {
+  margin: -25em 5em 0 5em;
+  max-width: 800px;
+}
+
+.hero-text-title {
+  margin-bottom: 1em;
+}
+.hero-text {
+  font-size: 2em;
+
+  color: white;
+}
+
+@media (max-width: 700px) {
+  .hero-text {
+    font-size: 1.7em;
   }
 
-
-.header{
-    max-width: 90vw;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    flex-wrap: nowrap;
-}
-
-.sverige-flaga{
-    margin-top: 60px;
-    object-fit: cover;
-    max-width: 100%;
-    display: block;
-    cursor: pointer;
-}
-/*link styling*/
-a{
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
-}
-/*sök symbol styling*/
-i {
-    margin-top: 50px;
-    margin-left: 40px;
-    display: block;
-    max-width: 100%;
-    font-size:35px;
-}
-/*headerkolumn-layout som innehåller logotyp och meny*/
-.header-container{
-    margin-left: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.logo{
-    height: 260px;
-    position: relative;
-    object-fit: contain;
-    margin-right: 20px;
-    margin-top: -10px;
-
-    img{
-        max-width: 100%;
+  .header-menu {
+    a {
+      font-size: 1.2em;
     }
-    
-}
-/*Meny styling*/
-.header-menu{
-    margin-top: -25px;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 5rem;
-    margin-right: 50px;
-}
-
-ul{
-    list-style: none;
-}
-
-
-/*meny text styling*/
-.menu-item{
-    font-size: 20px;
-}
-/*styling för logga in knappen*/
-button{
-    height: 3rem;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: #ff9ad2 ;
-    border-radius: 5px;
-    margin-top: 3rem;
-    margin-left: -4rem;
-    cursor: pointer;
-    white-space: nowrap;
-    border: none;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-/*logga in text styling*/
-.logga-in{
-    font-weight: 600;
-    color: white;
-}
-
-.ham-menu i {
+  }
+  .sverige-flagga {
     display: none;
+  }
+  .logga-in {
+    margin-top: -2em;
+    width: fit-content;
+    padding: 0.8em;
+    font-weight: bold;
+    font-size: 0.8em;
+  }
 }
-
-.hero{
-    max-width: 100vw;
-    margin: auto;
-    height: 618px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: url('images/hero.png');
-    background-size: cover;
-    background-position: center;
-    margin-top: 20px;
-
-}
-
-.hero img{
-  display: none;
-}
-
-.description-row {
-    position: absolute;
-    color: white;
-    text-align: start;
-    padding-left: 12%;
-    padding-right: 32%;
-    padding-top: 5%;
-}
-
-.title {
-    color:white;
-    font-size: 2rem;
-  font-weight: 700;
-}
-
-.under-text {
-    font-size: 32px;
-    font-weight: 400;
-    margin-top: 1rem;
-    color:white;
-}
-
 @media (max-width: 600px) {
-    .header {
-        max-width: 100vw;
-        padding: 10px;
-        flex-direction: column;
-        align-items: center;
+  .logga-in {
+    display: none;
+  }
+  .header-menu {
+    display: none;
+  }
+  .hero-text {
+    font-size: 1.2em;
+  }
+  .hero {
+    margin-top: -3em;
+    img {
+      height: fit-content;
     }
+  }
 
-    .header-container {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-    }
+  .logo {
+    max-width: 60vw;
+  }
 
-    .logo {
-        height: 150px;
-    }
+  .hero-text-container {
+    margin: -13em 1em 0 1em;
+  }
+  .search-symb {
+    margin-left: -70%;
+    position: absolute;
+  }
 
-    .menu-item {
-        display: none;
-    }
-    button {
-        display: none;
-    }
-    .sverige-flaga {
-        display: none;
-    }
-    .ham-menu{
-        display: flex;
-        justify-content: flex-end;
-        align-self: center;
-        padding-left: 200px;
-    
-    }
-    .ham-menu i {
-        display: block;
-        font-size: 60px !important;
-    }
-
-    .search-symb i {
-        font-size: 60px ;
-    }
-    .search-symb{
-        display: flex;
-        justify-content: center;
-        align-self: flex-start;
-        padding-right: 200px;
-        position: relative;
-    }
+  .ham-menu {
+    position: absolute;
+    display: block;
+    margin-right: -70%;
+  }
 }
-   
-
-@media (max-width: 1103px) {
-    .header {
-        max-width: 100vw;
-        padding: 10px;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .header-container {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: space-between;
-        align-items:center ;
-    }
-
-    .logo {
-        margin-top: -150px;
-        height:300px;
-        display: flex;
-        justify-content: center;
-    }
-
-    .menu-item {
-        display: none;
-    }
-    button {
-        display: none;
-    }
-    .sverige-flaga {
-        display: none;
-    }
-    .ham-menu{
-        display: flex;
-        justify-content: center;
-        margin-left: auto;
-        
-    }
-    .ham-menu i {
-        display: block;
-        font-size: 60px !important;
-    }
-
-    .search-symb i {
-        font-size: 60px ;
-    }
-    .search-symb{
-        display: flex;
-        justify-content: center;
-        margin-right: auto;
-    }
-}
-
-@media (max-width: 1265px) {
-    .menu-item {
-        font-size: 12px !important;
-    }
-    .sverige-flaga {
-        display: none;
-    }
-}
-
-@media (max-width: 1420px) {
-    .menu-item {
-        font-size: 16px;
-    }
-}
-
-
