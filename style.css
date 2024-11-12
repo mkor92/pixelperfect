@@ -2,6 +2,7 @@
 :root {
   --cardcolor: #eae2df;
   --cardshadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  --pink: #ff9ad2;
 }
 
 * {
@@ -11,7 +12,13 @@
   font-family: "Poppins";
 }
 
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 main {
+  flex: 1;
   margin: auto;
   max-width: 90vw;
 }
@@ -47,9 +54,61 @@ main {
   }
 }
 
-/* ----------- Mobildesign -----------*/
+/* ----------- Footer ----------- */
+
+footer {
+  display: flex;
+  background-color: black;
+  color: white;
+  justify-content: center;
+  margin-top: auto;
+  p,
+  address {
+    font-size: 0.8em;
+    margin-top: 0.4em;
+  }
+}
+
+.pink-text {
+  color: var(--pink);
+  margin-top: 2em;
+}
+
+.footer-info-container {
+  display: flex;
+  text-align: center;
+  width: 1120px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-logo {
+  width: 300px;
+  height: 300px;
+  margin-bottom: -2em;
+}
+
+.footer-icons {
+  margin-top: 2em;
+  img {
+    height: 3em;
+  }
+}
+
+/* --------------------- Mobildesign ---------------------*/
 
 @media (max-width: 600px) {
+  /* ----------- Footer ----------- */
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .footer-info-container {
+    flex-direction: column;
+  }
+
+  /* ----------- Event kort ----------- */
   .event-title {
     max-width: 90%;
     margin: 0 auto;
@@ -64,7 +123,6 @@ main {
     margin-top: 1em;
   }
 
-  /* Varje kort och bild täcker hela bredden */
   .event-card {
     min-width: 100%;
     scroll-snap-align: center;
