@@ -73,29 +73,90 @@ main {
       min-width: 100%;
     }
   }
+  
+/* ----------- Mobildesign Form -----------*/
+
+.form-flex {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+  "intro intro"
+  "name name"
+  "email email"
+  "amne amne"
+  "text text"
+  " . button";
+
+  row-gap: 1rem;
+  padding: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 0;
+  width: 100%;
+  max-height: 100%;
 }
 
+.form-logo {
+  display: none;
+}
+
+.form-intro {
+  justify-self: center;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  min-height: 3rem;
+}
+
+.form-inputbox {
+  grid-area: name;
+  height: 50px;
+  width: 100%;
+  justify-self: center;
+}
+
+.form-inputbox.epost {
+  grid-area: email;
+  height: 50px;
+  width: 100%;
+  justify-self: center;
+}
+
+.form-button {
+  position: relative;
+  bottom: 4rem;
+  margin-bottom: 1rem;
+}
+
+}
 
 /* Form */
 
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1120px;
+}
+
 .kontakt-rubrik {
-  width: 95%;
+  max-width: 1120px;
+  width: 100%;
   color: white;
   background-color: black;
   padding: 1rem;
-  margin-top: 1rem;
-  margin-right: 1rem;
-  margin-left: 1rem;
   text-align: center;
+  margin-top: 1rem;
 }
 
 .form-container {
   display: flex;
 
   background-color: #EAE2DF;
-  width: 95%;
+  width: 100%;
   height: auto;
-  margin: 1rem;
+  margin-top: 1rem;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
@@ -197,57 +258,3 @@ main {
 }
 
 
-
-@media screen and (max-width: 600px) {
-  .form-flex {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-areas: 
-      "intro intro"
-      "name name"
-      "email email"
-      "amne amne"
-      "text text"
-      " . button";
-  
-      row-gap: 1rem;
-      padding: 1rem;
-      margin-left: 2rem;
-      margin-right: 2rem;
-      margin-top: 0;
-      width: 100%;
-      max-height: 100%;
-  }
-
-  .form-logo {
-      display: none;
-  }
-
-  .form-intro {
-      justify-self: center;
-      text-align: center;
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-      min-height: 3rem;
-  }
-
-  .form-inputbox {
-      grid-area: name;
-      height: 50px;
-      width: 100%;
-      justify-self: center;
-  }
-
-  .form-inputbox.epost {
-      grid-area: email;
-      height: 50px;
-      width: 100%;
-      justify-self: center;
-  }
-
-  .form-button {
-      position: relative;
-      bottom: 4rem;
-      margin-bottom: 1rem;
-  }
-}
