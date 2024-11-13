@@ -9,22 +9,72 @@
       rel="stylesheet"
     />
     <title>Grupp 9</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" media="all" />
   </head>
   <body>
     <header>
-      <button class="log-in"></button>
+      <!-- container för Header content med Logan och meny-->
+      <section class="header-container">
+        <img
+          src="images/image 4.png"
+          alt="Sverige flaga"
+          class="sverige-flagga"
+        />
+        <!--Sök symbol-->
+        <aside class="search-symb"><i class="bx bx-search-alt"></i></aside>
+        <!--hamburgare-meny-->
+        <aside class="ham-menu">
+          <i class="bx bx-menu"></i>
+        </aside>
+        <img src="images/FullLogo_Transparent.png" alt="logotyp" class="logo" />
+        <!--Logga in knappen-->
+        <button class="logga-in">Logga in</button>
+      </section>
+      <!--meny listan-->
       <nav>
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+        <ul class="header-menu">
+          <li>
+            <a href="#">
+              <h5 class="menu-item">Presentkort & Erbjudanden</h5></a
+            >
+          </li>
+          <li>
+            <a href="#"><h5 class="menu-item">Boktips</h5></a>
+          </li>
+          <li>
+            <a href="#"><h5 class="menu-item">Barn och unga</h5></a>
+          </li>
+          <li>
+            <a href="#"><h5 class="menu-item">Bokklubb</h5></a>
+          </li>
+          <li>
+            <a href="#"><h5 class="menu-item">Om oss</h5></a>
+          </li>
         </ul>
       </nav>
     </header>
-    <section class="hero"></section>
+    <!--hero image-->
+    <section class="hero">
+      <img src="images/hero.png" alt="hero banner" />
+      <section class="hero-text-container">
+        <h4 class="hero-text hero-text-title">
+          "Välkommen till Pärmar & Poesi"
+        </h4>
+        <p class="hero-text">
+          Din lokala bokhandel med hjärta för både klassiker och nyheter. Här
+          möts du av litteratur, inspiration och spännande evenemang - allt för
+          bokälskaren!
+        </p>
+      </section>
+    </section>
     <main>
       <section class="event-container">
         <h2 class="event-title">Evenemang</h2>
@@ -57,7 +107,7 @@
             <div class="book-info">
               <h4>Svensk Poesi</h4>
               <p>2016</p>
-              <p>Författare:<br>Hasse Aro</p>
+              <p>Författare:<br />Hasse Aro</p>
               <a href="#">Läs mer</a>
             </div>
           </article>
@@ -66,16 +116,25 @@
             <div class="book-info">
               <h4>Skamlös</h4>
               <p>2017</p>
-              <p>Författare:<br> Amina Bile</p>
+              <p>
+                Författare:<br />
+                Amina Bile
+              </p>
               <a href="#">Läs mer</a>
             </div>
           </article>
           <article class="book-card">
-            <img src="images/book3.png" alt="Färskt vatten till blommorna omslag" />
+            <img
+              src="images/book3.png"
+              alt="Färskt vatten till blommorna omslag"
+            />
             <div class="book-info">
               <h4>Färskt vatten till blommorna</h4>
               <p>2023</p>
-              <p>Författare:<br> Valérie Perrin</p>
+              <p>
+                Författare:<br />
+                Valérie Perrin
+              </p>
               <a href="#">Läs mer</a>
             </div>
           </article>
@@ -92,7 +151,7 @@
           </p>
           <img
             class="form-logo"
-            src="images/FullLogo_Transparent 1.png"
+            src="images/FullLogo_Transparent.png"
             alt="Pärmen och poesi logga"
           />
           <input
@@ -108,7 +167,7 @@
             required
           />
           <br />
-          <input class="form-amne" type="text" placeholder="Ämne" required/>
+          <input class="form-amne" type="text" placeholder="Ämne" required />
           <textarea
             class="form-meddelande"
             cols="30"

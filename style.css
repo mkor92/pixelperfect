@@ -25,7 +25,8 @@ main {
 
 /* ----------- Event kort ----------- */
 .event-container {
-  margin: auto;
+  margin-top: 10em;
+
   max-width: 1120px;
 }
 
@@ -77,15 +78,14 @@ main {
 }
 
 .book-card {
-  display: flex; 
-  align-items: center; 
+  display: flex;
+  align-items: center;
   gap: 1em; /* Mellanrum mellan bild och text */
   width: 33%; /* Samma bredd som event-kort */
   height: 277px;
   box-shadow: var(--cardshadow);
   background-color: var(--cardcolor);
   padding: 1em;
-  
 }
 
 .book-card img {
@@ -97,8 +97,8 @@ main {
 .book-card .book-info {
   width: 50%; /* Textdelen tar upp av kortets bredd */
   display: flex;
-  flex-direction: column; 
-  gap: 0.5em; 
+  flex-direction: column;
+  gap: 0.5em;
 }
 
 .book-card h4 {
@@ -118,7 +118,6 @@ main {
   font-weight: bold;
   font-size: 0.9em;
 }
-
 
 /* ----------- Footer ----------- */
 
@@ -283,6 +282,110 @@ footer {
   color: white;
   cursor: pointer;
 }
+header {
+  margin: auto;
+  width: 100%;
+  max-width: 1120px;
+}
+
+.sverige-flagga {
+  height: fit-content;
+  margin-top: -3.5em;
+}
+
+.logo {
+  max-width: 400px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.header-menu {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+  margin-bottom: 1.5em;
+
+  a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.5em;
+  }
+}
+
+.logga-in {
+  margin-top: -1.5em;
+  height: fit-content;
+  width: 10em;
+  padding: 0.8em;
+  font-weight: bold;
+  font-size: 1em;
+  border-style: none;
+  border-radius: 0.3em;
+  box-shadow: var(--cardshadow);
+  color: white;
+  background-color: var(--pink);
+}
+
+.search-symb {
+  margin-top: -1.5em;
+  width: fit-content;
+  font-size: 2em;
+}
+.ham-menu {
+  margin-top: -1em;
+  width: fit-content;
+  display: none;
+  font-size: 2.5em;
+}
+
+.hero {
+  max-width: 100vw;
+
+  img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+  }
+}
+
+.hero-text-container {
+  margin: -25em 5em 0 5em;
+  max-width: 800px;
+}
+
+.hero-text-title {
+  margin-bottom: 1em;
+}
+.hero-text {
+  font-size: 2em;
+
+  color: white;
+}
+
+@media (max-width: 700px) {
+  .hero-text {
+    font-size: 1.7em;
+  }
+
+  .header-menu {
+    a {
+      font-size: 1.2em;
+    }
+  }
+  .sverige-flagga {
+    display: none;
+  }
+  .logga-in {
+    margin-top: -2em;
+    width: fit-content;
+    padding: 0.8em;
+    font-weight: bold;
+    font-size: 0.8em;
+  }
+}
 
 /* --------------------- Mobildesign ---------------------*/
 @media (max-width: 900px) {
@@ -311,7 +414,6 @@ footer {
 }
 
 @media (max-width: 600px) {
-  
   /* ----------- Footer ----------- */
   footer {
     display: flex;
@@ -328,6 +430,9 @@ footer {
     margin: 0 auto;
   }
 
+  .event-container {
+    margin-top: 5em;
+  }
   .event-card-container {
     display: flex;
     overflow-x: scroll;
@@ -402,5 +507,38 @@ footer {
     position: relative;
     bottom: 4rem;
     margin-bottom: 1rem;
+  }
+  .logga-in {
+    display: none;
+  }
+  .header-menu {
+    display: none;
+  }
+  .hero-text {
+    font-size: 1.2em;
+  }
+  .hero {
+    margin-top: -3em;
+    img {
+      height: fit-content;
+    }
+  }
+
+  .logo {
+    max-width: 60vw;
+  }
+
+  .hero-text-container {
+    margin: -13em 1em 0 1em;
+  }
+  .search-symb {
+    margin-left: -70%;
+    position: absolute;
+  }
+
+  .ham-menu {
+    position: absolute;
+    display: block;
+    margin-right: -70%;
   }
 }
