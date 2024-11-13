@@ -1,0 +1,543 @@
+/* ----------- Variabler ----------- */
+:root {
+  --cardcolor: #eae2df;
+  --cardshadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  --pink: #ff9ad2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+  margin: auto;
+  max-width: 90vw;
+}
+
+/* ----------- Event kort ----------- */
+.event-container {
+  margin: auto;
+  max-width: 1120px;
+}
+
+.event-title {
+  padding: 0.3em;
+  font-weight: 400;
+  text-align: center;
+  color: white;
+  background-color: black;
+  margin-bottom: 1em;
+}
+
+.event-card-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+}
+.event-card {
+  max-width: 33%;
+  text-align: center;
+  box-shadow: var(--cardshadow);
+  background-color: var(--cardcolor);
+
+  img {
+    max-width: 100%;
+  }
+}
+
+/* ----------- Boknyheter ----------- */
+.book-container {
+  margin: auto;
+  max-width: 1120px;
+  margin-top: 2em;
+}
+
+.book-title {
+  padding: 0.3em;
+  font-weight: 400;
+  text-align: center;
+  color: white;
+  background-color: black;
+  margin-bottom: 1em;
+}
+
+.book-card-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5em;
+}
+
+.book-card {
+  display: flex; 
+  align-items: center; 
+  gap: 1em; /* Mellanrum mellan bild och text */
+  width: 33%; /* Samma bredd som event-kort */
+  height: 277px;
+  box-shadow: var(--cardshadow);
+  background-color: var(--cardcolor);
+  padding: 1em;
+  
+}
+
+.book-card img {
+  width: 50%; /* Bilden tar upp av kortets bredd */
+  height: 100%; /* Bilden fyller kortets höjd */
+  object-fit: cover; /* Gör att bilden skalar proportionellt */
+}
+
+.book-card .book-info {
+  width: 50%; /* Textdelen tar upp av kortets bredd */
+  display: flex;
+  flex-direction: column; 
+  gap: 0.5em; 
+}
+
+.book-card h4 {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.book-card p {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+.book-card a {
+  text-decoration: none;
+  color: blue;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+
+/* ----------- Footer ----------- */
+
+footer {
+  display: flex;
+  background-color: black;
+  color: white;
+  justify-content: center;
+  margin-top: auto;
+  p,
+  address {
+    font-size: 0.8em;
+    margin-top: 0.4em;
+  }
+}
+
+.pink-text {
+  color: var(--pink);
+  margin-top: 2em;
+}
+
+.footer-info-container {
+  display: flex;
+  text-align: center;
+  width: 1120px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-logo {
+  width: 300px;
+  height: 300px;
+  margin-bottom: -2em;
+}
+
+.footer-icons {
+  margin-top: 2em;
+  img {
+    height: 3em;
+  }
+}
+
+/* ----------- Form ----------- */
+
+.kontakt-rubrik {
+  max-width: 1120px;
+  width: 100%;
+  color: white;
+  background-color: black;
+  padding: 1rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #eae2df;
+  width: 100%;
+  max-width: 1120px;
+  height: auto;
+  margin-top: 1rem;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.form-flex {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "intro logo"
+    "name email"
+    "amne amne"
+    "text text"
+    " . button";
+
+  row-gap: 1rem;
+  padding: 1rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  width: 100%;
+  max-height: 100%;
+}
+
+.form-intro {
+  grid-area: intro;
+  max-width: 25rem;
+  margin-top: 4rem;
+}
+
+.form-logo {
+  grid-area: logo;
+  position: absolute;
+  left: 60%;
+  object-fit: contain;
+
+  width: auto;
+  height: 200px;
+  margin-top: 1rem;
+  margin-left: -2rem;
+}
+
+.form-inputbox,
+.form-inputbox.epost,
+.form-amne,
+.form-meddelande {
+  font-family: poppins;
+  fill: linear-gradient(0deg, #fff 0%, #fff 100%), #f6f6f6;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  border: none;
+  padding: 1rem;
+}
+
+.form-inputbox {
+  grid-area: name;
+  justify-self: start;
+
+  height: 50px;
+  width: 85%;
+}
+
+.form-inputbox.epost {
+  grid-area: email;
+  justify-self: end;
+
+  height: 50px;
+  width: 85%;
+}
+
+.form-amne {
+  grid-area: amne;
+  height: 45px;
+  width: 100%;
+}
+
+.form-meddelande {
+  grid-area: text;
+  width: 100%;
+}
+
+.form-button {
+  grid-area: button;
+  justify-self: end;
+
+  background-color: #ff9ad2;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  width: 7rem;
+  height: 2rem;
+  padding: 5px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+
+  transition-duration: 0.4s;
+}
+
+.form-button:hover {
+  background-color: #f955b0;
+  color: white;
+  cursor: pointer;
+}
+header {
+  margin: auto;
+  width: 100%;
+  max-width: 1120px;
+}
+
+.sverige-flagga {
+  height: fit-content;
+  margin-top: -3.5em;
+}
+
+.logo {
+  max-width: 400px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.header-menu {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+  margin-bottom: 1.5em;
+
+  a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.5em;
+  }
+}
+
+.logga-in {
+  margin-top: -1.5em;
+  height: fit-content;
+  width: 10em;
+  padding: 0.8em;
+  font-weight: bold;
+  font-size: 1em;
+  border-style: none;
+  border-radius: 0.3em;
+  box-shadow: var(--cardshadow);
+  color: white;
+  background-color: var(--pink);
+}
+
+.search-symb {
+  margin-top: -1.5em;
+  width: fit-content;
+  font-size: 2em;
+}
+.ham-menu {
+  margin-top: -1em;
+  width: fit-content;
+  display: none;
+  font-size: 2.5em;
+}
+
+.hero {
+  max-width: 100vw;
+
+  img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+  }
+}
+
+.hero-text-container {
+  margin: -25em 5em 0 5em;
+  max-width: 800px;
+}
+
+.hero-text-title {
+  margin-bottom: 1em;
+}
+.hero-text {
+  font-size: 2em;
+
+  color: white;
+}
+
+@media (max-width: 700px) {
+  .hero-text {
+    font-size: 1.7em;
+  }
+
+  .header-menu {
+    a {
+      font-size: 1.2em;
+    }
+  }
+  .sverige-flagga {
+    display: none;
+  }
+  .logga-in {
+    margin-top: -2em;
+    width: fit-content;
+    padding: 0.8em;
+    font-weight: bold;
+    font-size: 0.8em;
+  }
+}
+
+/* --------------------- Mobildesign ---------------------*/
+@media (max-width: 900px) {
+  .book-card-container {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    gap: 4em;
+    padding: 0 1.5em 1.5em 1.5em;
+    margin-top: 1em;
+  }
+
+  .book-card {
+    min-width: 100%;
+    scroll-snap-align: center;
+  }
+
+  .book-card img {
+    width: 100%; /* Bilden fyller hela bredden av kortet */
+    object-fit: contain; /* Höjden justeras proportionellt */
+  }
+
+  .book-card .book-info {
+    text-align: center; /* Centrera texten för mobilvänlighet */
+  }
+}
+
+@media (max-width: 600px) {
+  
+  /* ----------- Footer ----------- */
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .footer-info-container {
+    flex-direction: column;
+  }
+
+  /* ----------- Event kort ----------- */
+  .event-title {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .event-card-container {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    gap: 4em;
+    padding: 0 1.5em 1.5em 1.5em;
+    margin-top: 1em;
+  }
+
+  .event-card {
+    min-width: 100%;
+    scroll-snap-align: center;
+
+    img {
+      min-width: 100%;
+    }
+  }
+
+  /* ----------- Mobil Form -----------*/
+
+  .form-container {
+    margin-bottom: 1rem;
+  }
+
+  .form-flex {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "intro intro"
+      "name name"
+      "email email"
+      "amne amne"
+      "text text"
+      " . button";
+
+    row-gap: 1rem;
+    padding: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 0;
+    width: 100%;
+    max-height: 100%;
+  }
+
+  .form-logo {
+    display: none;
+  }
+
+  .form-intro {
+    justify-self: center;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    min-height: 3rem;
+  }
+
+  .form-inputbox {
+    grid-area: name;
+    height: 50px;
+    width: 100%;
+    justify-self: center;
+  }
+
+  .form-inputbox.epost {
+    grid-area: email;
+    height: 50px;
+    width: 100%;
+    justify-self: center;
+  }
+
+  .form-button {
+    position: relative;
+    bottom: 4rem;
+    margin-bottom: 1rem;
+  }
+  .logga-in {
+    display: none;
+  }
+  .header-menu {
+    display: none;
+  }
+  .hero-text {
+    font-size: 1.2em;
+  }
+  .hero {
+    margin-top: -3em;
+    img {
+      height: fit-content;
+    }
+  }
+
+  .logo {
+    max-width: 60vw;
+  }
+
+  .hero-text-container {
+    margin: -13em 1em 0 1em;
+  }
+  .search-symb {
+    margin-left: -70%;
+    position: absolute;
+  }
+
+  .ham-menu {
+    position: absolute;
+    display: block;
+    margin-right: -70%;
+  }
+}

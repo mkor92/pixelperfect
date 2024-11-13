@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
     <title>Grupp 9</title>
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -12,7 +17,7 @@
       href="https://fonts.googleapis.com/css?family=Poppins"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css" media="all" />
   </head>
   <body>
     <header>
@@ -70,7 +75,140 @@
         </p>
       </section>
     </section>
-    <main></main>
-    <footer></footer>
+    <main>
+      <section class="event-container">
+        <h2 class="event-title">Evenemang</h2>
+        <section class="event-card-container">
+          <article class="event-card">
+            <img src="images/event1.png" alt="event picture" />
+            <h4>Bokklubb</h4>
+            <p>Datum : Onsdag 25 September</p>
+            <time>Tid: 12:30</time>
+          </article>
+          <article class="event-card">
+            <img src="images/event2.png" alt="event picture" />
+            <h4>Poesikväll</h4>
+            <p>Datum : Fredag 9 November</p>
+            <time>Tid: 18:00</time>
+          </article>
+          <article class="event-card">
+            <img src="images/event3.png" alt="event picture" />
+            <h4>Författarträff Per Hagman</h4>
+            <p>Datum : Måndag 19 December</p>
+            <time>Tid: 15:30</time>
+          </article>
+        </section>
+      </section>
+      <section class="book-container">
+        <h2 class="book-title">Boknyheter</h2>
+        <section class="book-card-container">
+          <article class="book-card">
+            <img src="images/book1.png" alt="Svensk Poesi omslag" />
+            <div class="book-info">
+              <h4>Svensk Poesi</h4>
+              <p>2016</p>
+              <p>Författare:<br />Hasse Aro</p>
+              <a href="#">Läs mer</a>
+            </div>
+          </article>
+          <article class="book-card">
+            <img src="images/book2.png" alt="Skamlös omslag" />
+            <div class="book-info">
+              <h4>Skamlös</h4>
+              <p>2017</p>
+              <p>
+                Författare:<br />
+                Amina Bile
+              </p>
+              <a href="#">Läs mer</a>
+            </div>
+          </article>
+          <article class="book-card">
+            <img
+              src="images/book3.png"
+              alt="Färskt vatten till blommorna omslag"
+            />
+            <div class="book-info">
+              <h4>Färskt vatten till blommorna</h4>
+              <p>2023</p>
+              <p>
+                Författare:<br />
+                Valérie Perrin
+              </p>
+              <a href="#">Läs mer</a>
+            </div>
+          </article>
+        </section>
+      </section>
+
+      <!-- Form-->
+      <h2 class="kontakt-rubrik">Kontakta oss</h2>
+      <div class="form-container">
+        <form class="form-flex">
+          <p class="form-intro">
+            Har du frågor, vill boka ett evenemang eller bara säga hej? Fyll i
+            formuläret nedan, vi ser fram emot att höra från dig!
+          </p>
+          <img
+            class="form-logo"
+            src="images/FullLogo_Transparent.png"
+            alt="Pärmen och poesi logga"
+          />
+          <input
+            class="form-inputbox"
+            type="text"
+            placeholder="Fullständigt namn"
+            required
+          />
+          <input
+            class="form-inputbox epost"
+            type="email"
+            placeholder="E-post adress"
+            required
+          />
+          <br />
+          <input class="form-amne" type="text" placeholder="Ämne" required />
+          <textarea
+            class="form-meddelande"
+            cols="30"
+            rows="10"
+            placeholder="Meddelande"
+            required
+          ></textarea>
+          <button class="form-button">Skicka</button>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <img
+        src="images/logo-for-blackbg.png"
+        alt="company-logo"
+        class="footer-logo"
+      />
+      <section class="footer-info-container">
+        <section>
+          <h4 class="pink-text">Kontakta oss</h4>
+          <p>031-368 34 00</p>
+          <p>Parmar.Poesi@bokhandel.se</p>
+          <p>Chatta med oss</p>
+        </section>
+        <section>
+          <h4 class="pink-text">Viktig info</h4>
+          <p>Så hanterar vi personuppgifter</p>
+          <p>Tillgänglighet</p>
+          <p>FAQ</p>
+        </section>
+        <section>
+          <h4 class="pink-text">Öppettider</h4>
+          <p>Vardagar: 09:00 - 19:00</p>
+          <p>Helger: Stängt</p>
+          <address>Besökadress: Götaplatsen 3</address>
+          <section class="footer-icons">
+            <img src="images/instagram-logo.png" alt="instagram-logo" />
+            <img src="images/facebook-logo.png" alt="facebook-logo" />
+          </section>
+        </section>
+      </section>
+    </footer>
   </body>
 </html>
