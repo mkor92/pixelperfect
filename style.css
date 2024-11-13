@@ -25,7 +25,8 @@ main {
 
 /* ----------- Event kort ----------- */
 .event-container {
-  margin: auto;
+  margin-top: 10em;
+
   max-width: 1120px;
 }
 
@@ -77,15 +78,14 @@ main {
 }
 
 .book-card {
-  display: flex; 
-  align-items: center; 
+  display: flex;
+  align-items: center;
   gap: 1em; /* Mellanrum mellan bild och text */
   width: 33%; /* Samma bredd som event-kort */
   height: 277px;
   box-shadow: var(--cardshadow);
   background-color: var(--cardcolor);
   padding: 1em;
-  
 }
 
 .book-card img {
@@ -97,8 +97,8 @@ main {
 .book-card .book-info {
   width: 50%; /* Textdelen tar upp av kortets bredd */
   display: flex;
-  flex-direction: column; 
-  gap: 0.5em; 
+  flex-direction: column;
+  gap: 0.5em;
 }
 
 .book-card h4 {
@@ -118,7 +118,6 @@ main {
   font-weight: bold;
   font-size: 0.9em;
 }
-
 
 /* ----------- Footer ----------- */
 
@@ -415,7 +414,6 @@ header {
 }
 
 @media (max-width: 600px) {
-  
   /* ----------- Footer ----------- */
   footer {
     display: flex;
@@ -432,6 +430,9 @@ header {
     margin: 0 auto;
   }
 
+  .event-container {
+    margin-top: 5em;
+  }
   .event-card-container {
     display: flex;
     overflow-x: scroll;
