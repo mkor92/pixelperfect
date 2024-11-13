@@ -1,34 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grupp 9</title>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="styles.css">
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!--Main Header sektion-->
-    <header class="header">
-      <img src="images/image 4.png" alt="Sverige flaga" class="sverige-flaga">
-      <!--Sök symbol-->
-      <a href="#">
-        <aside class="search-symb">
-        <i class='bx bx-search-alt'></i>
-      </a>
-    </aside>
-    <!--hamburgare-meny-->
-    <aside class="ham-menu">
-      <i class='bx bx-menu'></i>
-    </aside>
+    <header>
       <!-- container för Header content med Logan och meny-->
-      <aside class="header-container">
-        <img src="images/FullLogo_Transparent.png" alt="logotyp" class="logo">
-        <!--meny listan-->
+      <section class="header-container">
+        <img
+          src="images/image 4.png"
+          alt="Sverige flaga"
+          class="sverige-flagga"
+        />
+        <!--Sök symbol-->
+        <aside class="search-symb"><i class="bx bx-search-alt"></i></aside>
+        <!--hamburgare-meny-->
+        <aside class="ham-menu">
+          <i class="bx bx-menu"></i>
+        </aside>
+        <img src="images/FullLogo_Transparent.png" alt="logotyp" class="logo" />
+        <!--Logga in knappen-->
+        <button class="logga-in">Logga in</button>
+      </section>
+      <!--meny listan-->
+      <nav>
         <ul class="header-menu">
           <li>
-            <a href="#"> <h5 class="menu-item"> Presentkort & Erbjudanden</h5></a>
+            <a href="#">
+              <h5 class="menu-item">Presentkort & Erbjudanden</h5></a
+            >
           </li>
           <li>
             <a href="#"><h5 class="menu-item">Boktips</h5></a>
@@ -40,30 +51,26 @@
             <a href="#"><h5 class="menu-item">Bokklubb</h5></a>
           </li>
           <li>
-            <a href="#"><h5 class="menu-item"> Om oss</h5></a>
+            <a href="#"><h5 class="menu-item">Om oss</h5></a>
           </li>
         </ul>
-      </aside>
-      <!--Logga in knappen-->
-      <button class="logga-in">Logga in</button>
+      </nav>
     </header>
     <!--hero image-->
     <section class="hero">
-      <img src="images/hero.png" alt="hero banner">
-      <aside class="description-row">
-      <h1 class="title">
-      <span>
-      "Välkommen till Pärmar & Poesi"<br></span>
-      <span>
-      <br></span>
-      <span class="under-text">
-      Din lokala bokhandel med hjärta för både klassiker och nyheter. Här möts du av litteratur, inspiration och spännande evenemang - allt för bokälskaren!</span>
-      </h1>
-      </aside>
+      <img src="images/hero.png" alt="hero banner" />
+      <section class="hero-text-container">
+        <h4 class="hero-text hero-text-title">
+          "Välkommen till Pärmar & Poesi"
+        </h4>
+        <p class="hero-text">
+          Din lokala bokhandel med hjärta för både klassiker och nyheter. Här
+          möts du av litteratur, inspiration och spännande evenemang - allt för
+          bokälskaren!
+        </p>
       </section>
-      <main>
-      </main>
-      <footer>
-    </footer>
+    </section>
+    <main></main>
+    <footer></footer>
   </body>
 </html>
