@@ -397,7 +397,7 @@ header {
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     gap: 4em;
-    padding: 0 1.5em 1.5em 1.5em;
+
     margin-top: 1em;
   }
 
@@ -430,7 +430,7 @@ header {
 
   /* ----------- Event kort ----------- */
   .event-title {
-    max-width: 90%;
+    max-width: 100%;
     margin: 0 auto;
   }
 
@@ -442,7 +442,7 @@ header {
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     gap: 4em;
-    padding: 0 1.5em 1.5em 1.5em;
+
     margin-top: 1em;
   }
 
