@@ -2,6 +2,7 @@
 :root {
   --cardcolor: #eae2df;
   --cardshadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  --pink: #ff9ad2;
 }
 
 * {
@@ -11,7 +12,13 @@
   font-family: "Poppins";
 }
 
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 main {
+  flex: 1;
   margin: auto;
   max-width: 90vw;
 }
@@ -111,34 +118,211 @@ main {
   font-weight: bold;
   font-size: 0.9em;
 }
-@media (max-width: 600px) {
-  .book-card-container {
-    display: flex;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    gap: 4em;
-    padding: 0 1.5em 1.5em 1.5em;
-    margin-top: 1em;
-  }
 
-  .book-card {
-    min-width: 100%;
-    scroll-snap-align: center;
-  }
 
-  .book-card img {
-    width: 100%; /* Bilden fyller hela bredden av kortet */
-    height: auto; /* Höjden justeras proportionellt */
-  }
-  
+/* ----------- Mobildesign -----------*/
+/* ----------- Footer ----------- */
 
-  .book-card .book-info {
-    text-align: center; /* Centrera texten för mobilvänlighet */
+footer {
+  display: flex;
+  background-color: black;
+  color: white;
+  justify-content: center;
+  margin-top: auto;
+  p,
+  address {
+    font-size: 0.8em;
+    margin-top: 0.4em;
   }
 }
-/* ----------- Mobildesign -----------*/
+
+.pink-text {
+  color: var(--pink);
+  margin-top: 2em;
+}
+
+.footer-info-container {
+  display: flex;
+  text-align: center;
+  width: 1120px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-logo {
+  width: 300px;
+  height: 300px;
+  margin-bottom: -2em;
+}
+
+.footer-icons {
+  margin-top: 2em;
+  img {
+    height: 3em;
+  }
+}
+
+/* ----------- Form ----------- */
+
+.kontakt-rubrik {
+  max-width: 1120px;
+  width: 100%;
+  color: white;
+  background-color: black;
+  padding: 1rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #eae2df;
+  width: 100%;
+  max-width: 1120px;
+  height: auto;
+  margin-top: 1rem;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.form-flex {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "intro logo"
+    "name email"
+    "amne amne"
+    "text text"
+    " . button";
+
+  row-gap: 1rem;
+  padding: 1rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  width: 100%;
+  max-height: 100%;
+}
+
+.form-intro {
+  grid-area: intro;
+  max-width: 25rem;
+  margin-top: 4rem;
+}
+
+.form-logo {
+  grid-area: logo;
+  position: absolute;
+  left: 60%;
+  object-fit: contain;
+
+  width: auto;
+  height: 200px;
+  margin-top: 1rem;
+  margin-left: -2rem;
+}
+
+.form-inputbox,
+.form-inputbox.epost,
+.form-amne,
+.form-meddelande {
+  font-family: poppins;
+  fill: linear-gradient(0deg, #fff 0%, #fff 100%), #f6f6f6;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  border: none;
+  padding: 1rem;
+}
+
+.form-inputbox {
+  grid-area: name;
+  justify-self: start;
+
+  height: 50px;
+  width: 85%;
+}
+
+.form-inputbox.epost {
+  grid-area: email;
+  justify-self: end;
+
+  height: 50px;
+  width: 85%;
+}
+
+.form-amne {
+  grid-area: amne;
+  height: 45px;
+  width: 100%;
+}
+
+.form-meddelande {
+  grid-area: text;
+  width: 100%;
+}
+
+.form-button {
+  grid-area: button;
+  justify-self: end;
+
+  background-color: #ff9ad2;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  width: 7rem;
+  height: 2rem;
+  padding: 5px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+
+  transition-duration: 0.4s;
+}
+
+.form-button:hover {
+  background-color: #f955b0;
+  color: white;
+  cursor: pointer;
+}
+
+/* --------------------- Mobildesign ---------------------*/
 
 @media (max-width: 600px) {
+  
+    .book-card-container {
+      display: flex;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      gap: 4em;
+      padding: 0 1.5em 1.5em 1.5em;
+      margin-top: 1em;
+    }
+  
+    .book-card {
+      min-width: 100%;
+      scroll-snap-align: center;
+    }
+  
+    .book-card img {
+      width: 100%; /* Bilden fyller hela bredden av kortet */
+      height: auto; /* Höjden justeras proportionellt */
+    }
+    
+  
+    .book-card .book-info {
+      text-align: center; /* Centrera texten för mobilvänlighet */
+    }
+  /* ----------- Footer ----------- */
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .footer-info-container {
+    flex-direction: column;
+  }
+
+  /* ----------- Event kort ----------- */
   .event-title {
     max-width: 90%;
     margin: 0 auto;
@@ -153,7 +337,6 @@ main {
     margin-top: 1em;
   }
 
-  /* Varje kort och bild täcker hela bredden */
   .event-card {
     min-width: 100%;
     scroll-snap-align: center;
@@ -161,5 +344,63 @@ main {
     img {
       min-width: 100%;
     }
+  }
+
+  /* ----------- Mobil Form -----------*/
+
+  .form-container {
+    margin-bottom: 1rem;
+  }
+
+  .form-flex {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "intro intro"
+      "name name"
+      "email email"
+      "amne amne"
+      "text text"
+      " . button";
+
+    row-gap: 1rem;
+    padding: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 0;
+    width: 100%;
+    max-height: 100%;
+  }
+
+  .form-logo {
+    display: none;
+  }
+
+  .form-intro {
+    justify-self: center;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    min-height: 3rem;
+  }
+
+  .form-inputbox {
+    grid-area: name;
+    height: 50px;
+    width: 100%;
+    justify-self: center;
+  }
+
+  .form-inputbox.epost {
+    grid-area: email;
+    height: 50px;
+    width: 100%;
+    justify-self: center;
+  }
+
+  .form-button {
+    position: relative;
+    bottom: 4rem;
+    margin-bottom: 1rem;
   }
 }
