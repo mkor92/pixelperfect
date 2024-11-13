@@ -54,6 +54,72 @@ main {
   }
 }
 
+/* ----------- Boknyheter ----------- */
+.book-container {
+  margin: auto;
+  max-width: 1120px;
+  margin-top: 2em;
+}
+
+.book-title {
+  padding: 0.3em;
+  font-weight: 400;
+  text-align: center;
+  color: white;
+  background-color: black;
+  margin-bottom: 1em;
+}
+
+.book-card-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5em;
+}
+
+.book-card {
+  display: flex; 
+  align-items: center; 
+  gap: 1em; /* Mellanrum mellan bild och text */
+  width: 33%; /* Samma bredd som event-kort */
+  height: 277px;
+  box-shadow: var(--cardshadow);
+  background-color: var(--cardcolor);
+  padding: 1em;
+  
+}
+
+.book-card img {
+  width: 50%; /* Bilden tar upp av kortets bredd */
+  height: 100%; /* Bilden fyller kortets höjd */
+  object-fit: cover; /* Gör att bilden skalar proportionellt */
+}
+
+.book-card .book-info {
+  width: 50%; /* Textdelen tar upp av kortets bredd */
+  display: flex;
+  flex-direction: column; 
+  gap: 0.5em; 
+}
+
+.book-card h4 {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.book-card p {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+.book-card a {
+  text-decoration: none;
+  color: blue;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+
 /* ----------- Footer ----------- */
 
 footer {
@@ -219,8 +285,33 @@ footer {
 }
 
 /* --------------------- Mobildesign ---------------------*/
+@media (max-width: 900px) {
+  .book-card-container {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    gap: 4em;
+    padding: 0 1.5em 1.5em 1.5em;
+    margin-top: 1em;
+  }
+
+  .book-card {
+    min-width: 100%;
+    scroll-snap-align: center;
+  }
+
+  .book-card img {
+    width: 100%; /* Bilden fyller hela bredden av kortet */
+    object-fit: contain; /* Höjden justeras proportionellt */
+  }
+
+  .book-card .book-info {
+    text-align: center; /* Centrera texten för mobilvänlighet */
+  }
+}
 
 @media (max-width: 600px) {
+  
   /* ----------- Footer ----------- */
   footer {
     display: flex;
